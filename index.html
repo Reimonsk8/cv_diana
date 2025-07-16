@@ -17,8 +17,8 @@
         }
         body {
             font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            margin: 2px;
+            padding: 2px;
             min-height: 100vh;
             background: var(--background);
             color: var(--text-main);
@@ -26,98 +26,161 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
+            font-size: 0.8em;
         }
         .download-btn {
             margin: 32px 0 24px 0;
-            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
-            color: var(--text-light);
-            border: none;
-            border-radius: 6px;
-            padding: 12px 28px;
-            font-size: 1.1em;
+            background: #fff;
+            color: var(--primary-blue);
+            border: 1.5px solid #e3e8ee;
+            border-radius: 8px;
+            padding: 8px 18px 8px 14px;
+            font-size: 1em;
             font-weight: 600;
             cursor: pointer;
-            transition: background 0.2s, box-shadow 0.2s;
-            box-shadow: 0 2px 8px rgba(27, 34, 51, 0.08);
+            transition: box-shadow 0.2s, border-color 0.2s;
+            box-shadow: 0 1px 4px rgba(27, 34, 51, 0.07);
             align-self: flex-end;
             font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
         }
         .download-btn:hover {
-            background: linear-gradient(90deg, var(--secondary-purple) 0%, var(--primary-blue) 100%);
-            box-shadow: 0 4px 16px rgba(27, 34, 51, 0.13);
+            background: #f3f6fa;
+            border-color: #1976d2;
+            box-shadow: 0 2px 8px rgba(27, 34, 51, 0.10);
         }
         .container {
             max-width: 800px;
             width: 100%;
             background: var(--sheet-bg);
-            padding: 32px 40px;
-            border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(27, 34, 51, 0.10);
-            border-top: 8px solid var(--primary-blue);
-            margin-bottom: 48px;
+            padding: 18px 18px 18px 18px;
+            border-radius: 6px;
+            box-shadow: 0 2px 12px rgba(27, 34, 51, 0.08);
+            border-top: 6px solid var(--primary-blue);
+            margin-bottom: 24px;
             margin-left: auto;
             margin-right: auto;
             position: relative;
         }
-        .profile-header {
+        .profile-header {   
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
-            margin-bottom: 18px;
+            border-bottom: 1px solid #e3e8ee;
         }
         .profile-info {
             flex: 1 1 auto;
+            min-width: 0;
         }
         .profile-photo {
-            width: 92px;
-            height: 92px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--accent-blue);
-            box-shadow: 0 2px 8px rgba(27, 34, 51, 0.10);
-            margin-left: 24px;
+            border: 2px solid var(--accent-blue);
+            box-shadow: 0 1px 4px rgba(27, 34, 51, 0.08);
+            margin-left: 16px;
             background: #eee;
+            margin-bottom: 10px;
         }
         h1 {
             margin-top: 0;
-            font-size: 2.4em;
+            font-size: 1.6em;
             color: var(--primary-blue);
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             font-weight: 700;
             font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
         }
         h2 {
             color: var(--secondary-purple);
-            margin-bottom: 8px;
-            border-left: 5px solid var(--accent-blue);
-            padding-left: 12px;
-            font-size: 1.3em;
+            margin-bottom: 6px;
+            border-left: 4px solid var(--accent-blue);
+            padding-left: 10px;
+            font-size: 1.1em;
             font-weight: 600;
             font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
         }
         .contact {
-            margin-bottom: 24px;
+            margin-bottom: 12px;
             background: linear-gradient(90deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
             color: var(--text-light);
-            padding: 16px 20px;
-            border-radius: 8px;
+            padding: 10px 14px;
+            border-radius: 6px;
         }
         .contact p, .contact a {
             color: var(--text-light);
-            margin: 2px 0;
+            margin: 1px 0;
             text-decoration: none;
             font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
         }
-        ul {
+        .summary-skills-row {
+            display: flex;
+            flex-direction: row;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+        .summary-box, .skills-box {
+            background: #f3f6fa;
+            border-radius: 8px;
+            padding: 12px 10px 10px 10px;
+            flex: 1 1 0;
+            box-sizing: border-box;
+            box-shadow: 0 1px 4px rgba(27,34,51,0.04);
+            min-width: 0;
+        }
+        .skills-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-width: 220px;
+            max-width: 320px;
+            padding: 0;
+            background: transparent;
+            box-shadow: none;
+        }
+        .skills-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
             margin-top: 4px;
-            margin-bottom: 16px;
-            padding-left: 20px;
+        }
+        .skill-card {
+            background: #f8fafc;
+            border: 1.2px solid #e3e8ee;
+            border-radius: 8px;
+            padding: 5px 7px 5px 7px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 1em;
+            color: var(--primary-blue);
+            font-weight: 500;
+            box-shadow: 0 1px 2px rgba(27,34,51,0.04);
+            transition: box-shadow 0.2s;
+            justify-content: flex-start;
+        }
+        .skills-title {
+            border-left: none !important;
+            padding-left: 0 !important;
+            color: var(--primary-blue) !important;
+            margin-top: 0 !important;
+            font-size: 1.1em;
+            letter-spacing: 0.3px;
+            font-weight: 700;
+        }
+        .section-divider {
+            border: none;
+            border-top: 1px solid #e3e8ee;
+            margin: 18px 0 12px 0;
         }
         .section {
-            margin-bottom: 28px;
+            margin-bottom: 14px;
         }
         .job {
-            margin-bottom: 16px;
+            margin-bottom: 10px;
         }
         .job-title {
             font-weight: 600;
@@ -132,8 +195,11 @@
         .job-date {
             float: right;
             color: var(--accent-blue);
-            font-size: 0.95em;
             font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+        }
+        @media (max-width: 700px) {
+            .summary-skills-row { flex-direction: column; gap: 16px; }
+            .summary-box, .skills-box { max-width: 100%; min-width: 0; }
         }
         @media (max-width: 600px) {
             .container { padding: 16px 2vw; }
@@ -141,6 +207,7 @@
             .download-btn { padding: 8px 12px; font-size: 0.95em; margin: 16px 0 12px 0; }
             .profile-header { flex-direction: column; align-items: flex-start; }
             .profile-photo { margin-left: 0; margin-top: 12px; }
+            .skills-table td { font-size: 1em; padding: 4px 5px; }
         }
         @media print {
             body {
@@ -158,10 +225,47 @@
                 padding: 0 0 0 0 !important;
             }
         }
+        .print-note {
+            color: #444;
+            background: #f3f6fa;
+            border: 1px solid #e3e8ee;
+            border-radius: 6px;
+            font-size: 0.95em;
+            padding: 7px 14px;
+            margin: 0;
+            max-width: 320px;
+            position: absolute;
+            right: 0;
+            top: 110%;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(27,34,51,0.08);
+            display: none;
+            white-space: normal;
+        }
+        .download-btn-wrapper { position: relative; display: inline-block; }
+        .download-btn-wrapper:hover .print-note,
+        .download-btn-wrapper:focus-within .print-note {
+            display: block;
+        }
+        @media print {
+            .print-note { display: none !important; }
+        }
     </style>
 </head>
 <body>
-    <button class="download-btn" onclick="window.print()">Descargar PDF</button>
+    <div class="download-btn-wrapper" style="align-self: flex-end;">
+        <button class="download-btn" onclick="window.print()" title="Descargar PDF" aria-label="Descargar PDF">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block; margin:0;">
+                <rect width="24" height="24" fill="none"/>
+                <path d="M12 3v12m0 0l-4-4m4 4l4-4" stroke="#1976d2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="6" y="17" width="12" height="2.5" rx="1.2" fill="#1976d2"/>
+            </svg>
+            PDF
+        </button>
+        <div class="print-note">
+            <span>Tip: In the print dialog, uncheck <b>"Headers and footers"</b> and enable <b>"Background graphics"</b> for best results.</span>
+        </div>
+    </div>
     <div class="container">
         <div class="profile-header">
             <div class="profile-info">
@@ -169,92 +273,99 @@
             </div>
             <img class="profile-photo" src="https://scontent.fmex46-1.fna.fbcdn.net/v/t39.30808-6/471614818_10161109178682725_2749430154625602227_n.jpg?_nc_cat=101&amp;ccb=1-7&amp;_nc_sid=cf85f3&amp;_nc_eui2=AeGaC2LWsM7-ddkXifySzzsSue7dwR5kjKu57t3BHmSMq5YaqydifuJ8IoMKrNjE6Okjipsf3ANI9e-mIeWdkMow&amp;_nc_ohc=AL4BQ-wtq1UQ7kNvwHGoLYW&amp;_nc_oc=AdliPrwxPsjLYoi4ByA204AkyIkYcx65B3izaa-a7CsJZ3QI-iiZd9-IllUzagCRWFtyYhINh4CbT2Jv29G_GPos&amp;_nc_zt=23&amp;_nc_ht=scontent.fmex46-1.fna&amp;_nc_gid=bULLNnPLDvtc47cH0-Pofw&amp;oh=00_AfSaAMHGAFtoZA9BWCp7YuMnkx4dZW8mELzWe1QwAfTkqg&amp;oe=687CECA1" alt="Foto de Diana Isabel Carrillo Luna" />
         </div>
+
+
+        <div class="summary-skills-row">
+            <div class="section">
+                <h2>Trayectoria Profesional</h2>
+                <div class="job">
+                    <span class="job-title">Recepcionista de hotel</span> <span class="job-company">Emmalu Hotel Boutique | Ensenada</span> <span class="job-date">Abril 2024 - Actual</span>
+                    <ul>
+                        <li>Gestión y realización de reservas de manera presencial, telefónica y online.</li>
+                        <li>Cobro y facturación de la estadía y los servicios consumidos por los clientes.</li>
+                        <li>Gestión del correo electrónico de recepción y respuesta a mensajes.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <span class="job-title">Capitán de meseros</span> <span class="job-company">Bakuss oyster bar | Ensenada, Baja California</span> <span class="job-date">Octubre 2022 - Marzo 2024</span>
+                    <ul>
+                        <li>Trabajo en equipo para cumplir los objetivos de la empresa.</li>
+                        <li>Implementación de políticas y procedimientos de la empresa.</li>
+                        <li>Resolución de problemas y solución de incidencias.</li>
+                        <li>Ejecución de tareas de ventas.</li>
+                        <li>Mantenimiento del orden y la limpieza en el lugar de trabajo.</li>
+                        <li>Procesamiento de pagos y transacciones financieras.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <span class="job-title">Bartender</span> <span class="job-company">Portée | Ensenada, San Antonio</span> <span class="job-date">Abril 2022 - Mayo 2022</span>
+                    <ul>
+                        <li>Preparación de una amplia variedad de bebidas y cócteles, y asesoramiento sobre los mismos.</li>
+                        <li>Organización de las bebidas, vasos y grifos, y limpieza general del bar.</li>
+                        <li>Elaboración y servicio de bebidas con y sin alcohol.</li>
+                        <li>Actualización del inventario con el detalle de los productos faltantes en la barra.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <span class="job-title">Bartender</span> <span class="job-company">Ophelia | Ensenada, El sauzal</span> <span class="job-date">Febrero 2022 - Abril 2022</span>
+                    <ul>
+                        <li>Preparación de una amplia variedad de bebidas y cócteles, y asesoramiento sobre los mismos.</li>
+                        <li>Servicio a los clientes de manera rápida y eficiente, sin servir alcohol a menores ni clientes ebrios.</li>
+                        <li>Toma de nota de las órdenes de tragos, sea a través de los meseros o directamente en el bar.</li>
+                        <li>Elaboración y servicio de bebidas con y sin alcohol.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <span class="job-title">Cajero/Bartender</span> <span class="job-company">Altabaja | Ensenada, Zona centro</span> <span class="job-date">Febrero 2021 - Enero 2022</span>
+                    <ul>
+                        <li>Realización de cobros, gestión de devoluciones y administración de los documentos contables relacionados con la caja.</li>
+                        <li>Asesoramiento a los clientes para resolver sus dudas y garantizar un servicio excelente.    </li>
+                        <li>Manejo de caja registradora, incluido el cobro en efectivo o con tarjeta y el uso del TPV.</li>
+                        <li>Registro detallado de todas las transacciones para asegurar el cuadre de caja al final del día.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skills-box">
+
+                <div class="summary-box">
+                    <h2 style="border-left: none; padding-left: 0; color: var(--primary-blue); margin-top: 0;">Resumen</h2>
+                    <p style="margin-top: 6px;">Con amplia experiencia profesional y muchas ganas de trabajar. Me caracterizo por mi capacidad para solucionar problemas, priorizar y gestionar proyectos y trabajar en equipo. Busco una oportunidad para desarrollar mi carrera y dar lo mejor de mí.</p>
+                </div>
+                <h2 class="skills-title">Aptitudes</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">Trato cortés al cliente</div>
+                    <div class="skill-card">Excelente presencia</div>
+                    <div class="skill-card">Responsabilidad y autonomía</div>
+                    <div class="skill-card">Buena organización</div>
+                    <div class="skill-card">Energía positiva</div>
+                    <div class="skill-card">Flexibilidad de horarios</div>
+                    <div class="skill-card">Capacidad de trabajo</div>
+                    <div class="skill-card">Atención al público</div>
+                    <div class="skill-card">Simpatía y amabilidad</div>
+                    <div class="skill-card">Gran capacidad de organización</div>
+                    <div class="skill-card">Innovación y creatividad</div>
+                    <div class="skill-card">Elaboración de cócteles</div>
+                    <div class="skill-card">Dominio del inglés</div>
+                    <div class="skill-card">Excelentes habilidades de comunicación</div>
+                </div>
+                <div class="section">
+                    <h2>Formación Académica</h2>
+                    <p><strong>Licenciado en Ciencias de la Comunicación</strong><br>
+                    Universidad Autónoma de Baja California, Ensenada, Baja California<br>
+                    2020</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="section-divider"></div>
         <div class="contact">
-            <p><strong>Dirección:</strong> Av. Cuitlahuac 1039 azteca, 22830, Ensenada</p>
-            <p><strong>Email:</strong> <a href="mailto:dcarrillo92@uabc.edu.mx">dcarrillo92@uabc.edu.mx</a></p>
+            <p><strong>Ubicación:</strong> Av. Cuitlahuac 1039 azteca, 22830, Ensenada</p>
+            <p><strong>Correo electrónico:</strong> <a href="mailto:dcarrillo92@uabc.edu.mx">dcarrillo92@uabc.edu.mx</a></p>
         </div>
 
-        <div class="section">
-            <h2>Resumen Profesional</h2>
-            <p>Con amplia experiencia profesional y muchas ganas de trabajar. Me caracterizo por mi capacidad para solucionar problemas, priorizar y gestionar proyectos y trabajar en equipo. Busco una oportunidad para desarrollar mi carrera y dar lo mejor de mí.</p>
-        </div>
 
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>Trato cortés al cliente</li>
-                <li>Excelente presencia</li>
-                <li>Responsabilidad y autonomía</li>
-                <li>Buena organización</li>
-                <li>Energía positiva y ganas de trabajar</li>
-                <li>Flexibilidad de horarios</li>
-                <li>Capacidad de trabajo</li>
-                <li>Atención al público</li>
-                <li>Simpatía y amabilidad</li>
-                <li>Gran capacidad de organización</li>
-                <li>Innovación y creatividad</li>
-                <li>Elaboración de cócteles</li>
-                <li>Dominio del inglés</li>
-                <li>Excelentes habilidades de comunicación</li>
-            </ul>
-        </div>
 
-        <div class="section">
-            <h2>Experiencia Laboral</h2>
-            <div class="job">
-                <span class="job-title">Recepcionista de hotel</span> <span class="job-company">Emmalu Hotel Boutique | Ensenada</span> <span class="job-date">Abril 2024 - Actual</span>
-                <ul>
-                    <li>Gestión y realización de reservas de manera presencial, telefónica y online.</li>
-                    <li>Cobro y facturación de la estadía y los servicios consumidos por los clientes.</li>
-                    <li>Gestión del correo electrónico de recepción y respuesta a mensajes.</li>
-                </ul>
-            </div>
-            <div class="job">
-                <span class="job-title">Capitán de meseros</span> <span class="job-company">Bakuss oyster bar | Ensenada, Baja California</span> <span class="job-date">Octubre 2022 - Marzo 2024</span>
-                <ul>
-                    <li>Trabajo en equipo para cumplir los objetivos de la empresa.</li>
-                    <li>Implementación de políticas y procedimientos de la empresa.</li>
-                    <li>Resolución de problemas y solución de incidencias.</li>
-                    <li>Ejecución de tareas de ventas.</li>
-                    <li>Mantenimiento del orden y la limpieza en el lugar de trabajo.</li>
-                    <li>Procesamiento de pagos y transacciones financieras.</li>
-                </ul>
-            </div>
-            <div class="job">
-                <span class="job-title">Bartender</span> <span class="job-company">Portée | Ensenada, San Antonio</span> <span class="job-date">Abril 2022 - Mayo 2022</span>
-                <ul>
-                    <li>Preparación de una amplia variedad de bebidas y cócteles, y asesoramiento sobre los mismos.</li>
-                    <li>Organización de las bebidas, vasos y grifos, y limpieza general del bar.</li>
-                    <li>Elaboración y servicio de bebidas con y sin alcohol.</li>
-                    <li>Actualización del inventario con el detalle de los productos faltantes en la barra.</li>
-                </ul>
-            </div>
-            <div class="job">
-                <span class="job-title">Bartender</span> <span class="job-company">Ophelia | Ensenada, El sauzal</span> <span class="job-date">Febrero 2022 - Abril 2022</span>
-                <ul>
-                    <li>Preparación de una amplia variedad de bebidas y cócteles, y asesoramiento sobre los mismos.</li>
-                    <li>Servicio a los clientes de manera rápida y eficiente, sin servir alcohol a menores ni clientes ebrios.</li>
-                    <li>Toma de nota de las órdenes de tragos, sea a través de los meseros o directamente en el bar.</li>
-                    <li>Elaboración y servicio de bebidas con y sin alcohol.</li>
-                </ul>
-            </div>
-            <div class="job">
-                <span class="job-title">Cajero/Bartender</span> <span class="job-company">Altabaja | Ensenada, Zona centro</span> <span class="job-date">Febrero 2021 - Enero 2022</span>
-                <ul>
-                    <li>Realización de cobros, gestión de devoluciones y administración de los documentos contables relacionados con la caja.</li>
-                    <li>Asesoramiento a los clientes para resolver sus dudas y garantizar un servicio excelente.</li>
-                    <li>Manejo de caja registradora, incluido el cobro en efectivo o con tarjeta y el uso del TPV.</li>
-                    <li>Registro detallado de todas las transacciones para asegurar el cuadre de caja al final del día.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Educación</h2>
-            <p><strong>Licenciado en Ciencias de la Comunicación</strong><br>
-            Universidad Autónoma de Baja California, Ensenada, Baja California<br>
-            2020</p>
-        </div>
     </div>
 </body>
 </html> 
